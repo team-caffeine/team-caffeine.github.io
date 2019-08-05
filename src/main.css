@@ -67,7 +67,6 @@ main {
 
 .logo {
     width: 12%;
-    display: inline;
 }
 
 #logo {
@@ -84,7 +83,7 @@ section {
     border-radius: 8px;
     padding: 20px;
     width: 60%;
-    margin: 0 auto;
+    margin: 0 auto 50px;
 }
 
 button {
@@ -94,6 +93,19 @@ button {
     text-transform: uppercase;
     border-radius: 8px;
     font-size: 14px;
+}
+
+.barista-button {
+    width: 18%;
+}
+
+.barista-button:hover {
+    cursor: pointer;
+
+}
+
+.radio-input {
+    display: none;
 }
 
 
