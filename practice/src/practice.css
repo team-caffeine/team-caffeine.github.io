@@ -1,0 +1,29 @@
+main {
+    position: relative;
+    width: 85%;
+    margin: 5% 0;
+}
+
+#order-display {
+    display: inline;
+    margin: 10% 5%;
+}
+
+#cup-display {
+    display: inline;
+    margin: 10% 12%;
+}
+
+#ingredient-container {
+    position: relative;
+    display: inline;
+    right: 0;
+    margin: 10% 5%;
+}
+
+.ingredient-buttons {
+    position: relative;
+    right: 0;
+    display: block;
+    margin: 0;
+}
