@@ -1,0 +1,48 @@
+#profile-box {
+    width: 30%;
+    background-color: rgba(230, 226, 226, 0.557);
+    padding: 12px;
+    border-radius: 8px;
+    margin-left: 150px;
+}
+
+#profile-box img {
+    width: 20%;
+    height: 20%;
+    margin: 0 10px;
+}
+
+#profile-box-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#current-results {
+    width: 30%;
+    text-align: center;
+    margin-right: 150px;
+    background-color: rgba(230, 226, 226, 0.557);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.result-item {
+    display: flex;
+    align-items: center;
+    margin-left: 30%;
+}
+
+.results-image {
+    width: 15%;
+}
+
+.play-again {
+    margin-top: 50px;
+}
