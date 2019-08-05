@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e7eceb;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    /* padding: 50px; */
+    margin: 0;
+    background-color: #b07002f7;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Oswald', sans-serif;
+    color: #223f4a;
+    
+}
+
+header h1 {
+    font-family: 'Yellowtail', cursive;
+    font-size: 68px;
+    color: white;
+    margin: 2px 0;
+    display: inline;
+}
+
+.h1-brew {
+    margin-left: 8px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 56px;
+    color: #f0bb29;
+}
+
+#header-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#profile-section {
+    visibility: hidden;
+    max-width: 300px;
+}
+
+
+footer {
+    margin-top: 100px;
+    text-align: center;
+    background-color: #b07002f7;
+    padding: 10px 0;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 12px;
+}
+
+main {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.logo {
+    width: 12%;
+    display: inline;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+section {
+    margin: 50px 0;
+}
+
+#register-form {
+    background-color: rgba(230, 226, 226, 0.557);
+    border-radius: 8px;
+    padding: 20px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+button {
+    background-color: #223f4a;
+    padding: 10px 15px;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+
