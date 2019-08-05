@@ -15,7 +15,6 @@ header {
 }
 
 nav {
-    text-align: center;
     font-family: 'Oswald', sans-serif;
     color: white;
     text-transform: uppercase;
@@ -60,12 +59,23 @@ header h1 {
 #header-box {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;–
 }
 
 #profile-section {
     /* visibility: hidden; */
-    max-width: 300px;
+    max-width: 250px;
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+}
+
+#profile {
+    color: white;
+}
+
+.profile-image-link {
+    width: 100px;
 }
 
 
@@ -94,7 +104,7 @@ main {
 #logo {
     display: flex;
     align-items: center;
-    margin-right: -850px;
+    margin-right: -700px;
 }
 
 section {
@@ -120,11 +130,17 @@ button {
 
 .barista-button {
     width: 18%;
+    height: 18%;
 }
 
 .barista-button:hover {
     cursor: pointer;
 
+}
+
+.user-name-icon {
+    width: 100%;
+    height: 100%;
 }
 
 .radio-input {
