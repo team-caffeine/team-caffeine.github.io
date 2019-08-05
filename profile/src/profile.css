@@ -3,6 +3,7 @@
     background-color: rgba(230, 226, 226, 0.557);
     padding: 12px;
     border-radius: 8px;
+    margin-left: 150px;
 }
 
 #profile-box img {
@@ -20,15 +21,28 @@
 main {
     width: 80%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 #current-results {
-    width: 40%;
+    width: 30%;
+    text-align: center;
+    margin-right: 150px;
+    background-color: rgba(230, 226, 226, 0.557);
+    padding: 12px;
+    border-radius: 8px;
 }
 
-ul {
-    list-style-type: none;
-    text-align: left;
-    margin-left: 80px;
+.result-item {
+    display: flex;
+    align-items: center;
+    margin-left: 30%;
+}
+
+.results-image {
+    width: 15%;
+}
+
+.play-again {
+    margin-top: 50px;
 }
