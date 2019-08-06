@@ -18,7 +18,17 @@ const store = {
             masterDrinksList = drinks;
         }
         return masterDrinksList;
-    }
+    },
+    saveUser(user){
+        const json = JSON.stringify(user);
+        store.storage.setItem('user', json);
+    },
+    getUser() {
+        const json = store.storage.getItem('user');
+        if(!json) return null;
+        const user = JSON.parse(json);
+        return user;
+    },
 };
 
 export default store;

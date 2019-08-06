@@ -31,3 +31,18 @@ test('verify that the drink info is pulling correctly', (assert) => {
     //assert
     assert.deepEqual(masterDrinksList, drinks);
 });
+
+test('save user info and verify it is correct', (assert) => {
+    //arrange
+    const user = {
+        name: 'Alex',
+        avatar: './assets/barista1.png'
+    };
+
+    //act
+    store.saveUser(user);
+    const result = store.getUser();
+
+    //assert
+    assert.deepEqual(result, user);
+})
