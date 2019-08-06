@@ -16,21 +16,47 @@ main {
 #order-display {
     background-image: url('/assets/notepadpaper.png');
     width: 275px;
+    height: 400px;
     padding-top: 75px;
     text-align: left;
     padding-left: 50px;
 }
 
-
+/* ingredient images CSS */
 #cup-display {
-    background-image: url('/assets/emptycup.png');
+    /* background-image: url('/assets/emptycup.png'); */
     background-size: contain;
     width: 400px;
-    height: 400px;
+    height: 300px;
     align-self: center;
     background-repeat: no-repeat;
     background-position: center;
+    position: relative;
+    margin: 0;
 }
+
+#empty-cup {
+    width: 400px;
+    position: absolute;
+    top: 45%;
+    right: 0%;
+}
+
+#ingredient-2, #ingredient-3, #ingredient-4 {
+    width: 82%;
+    margin-bottom: -30px;
+    margin-right: 22px;
+    margin-top: 4px;
+}
+
+#ingredient-1 {
+    width: 68%;
+    margin-bottom: -30px;
+    margin-right: 22px;
+    margin-top: 4px;
+}
+
+/* buttons CSS */
 
 .ingredient-buttons {
     background-color: #223f4a;
@@ -109,6 +135,8 @@ main {
     color: #260000;
 }
 
+/* results section css */
+
 #results-section {
     margin-bottom: 10%;
     text-align: center;
@@ -116,4 +144,9 @@ main {
 
 #results-button {
     width: 250px;
+}
+
+#results-button:hover {
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(96,57,19,0.5);
 }
