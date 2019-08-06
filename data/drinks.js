@@ -44,7 +44,7 @@ const drinks = [
     {
         id: 'red-eye',
         name: 'Red Eye',
-        ingredients: ['dip-coffee', 'espresso'],
+        ingredients: ['drip-coffee', 'espresso'],
         description: 'A red eye is a fortified coffee drink in which espresso is combined with normal drip coffee',
     },
     {
