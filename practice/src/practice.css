@@ -1,48 +1,119 @@
+
 main {
-    position: relative;
+    display: flex;
     width: 85%;
-    margin: 0 auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 2%;
+}
+
+#title {
+    text-align: center;
+    margin-top: 50px;
 }
 
 #order-display {
-    display: inline;
-    margin: 10% 5%;
+    background-image: url('/assets/notepadpaper.png');
+    width: 275px;
+    padding-top: 75px;
+    text-align: left;
+    padding-left: 50px;
 }
+
 
 #cup-display {
-    display: inline;
-    margin: 10% 12% 10% 5%;
-}
-
-#ingredient-container {
-    position: relative;
-    display: inline;
-    right: 0;
-    margin: 10% 5%;
+    background-image: url('/assets/emptycup.png');
+    background-size: contain;
+    width: 400px;
+    height: 400px;
+    align-self: center;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .ingredient-buttons {
-    position: relative;
-    right: 0;
-    display: block;
-    margin: 30% 0;
-    width: 100px;
+    background-color: #223f4a;
+    padding: 10px 15px;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 250px;
+    margin-bottom: 3px;
+    font-weight: 700;
 }
 
 .ingredient-buttons:hover {
-    background-color: #f0bb29;
     cursor: pointer;
-}
-
-#game-flex {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    box-shadow: 0 5px 15px rgba(96,57,19,0.5);
 }
 
 #ingredient-nav {
-    position: absolute;
     display: flex;
     background-color: #f0bb29;
     fill-opacity: .8;
+}
+
+#ingredient-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: -1px;
+    text-align: left;
+}
+
+#drip-coffee {
+    background-color: #260000;
+}
+
+#espresso {
+    background-color: #603913;
+}
+
+#cocoa {
+    background-color: #3a1e07;
+}
+
+#water {
+    background-color: #b3dfe0;
+    color: #260000;
+}
+
+#half-and-half {
+    background-color: #ffd7b0;
+    color: #260000;
+}
+
+#steamed-milk {
+    background-color: #ffd7b0;
+    color: #260000;
+}
+
+#whipped-cream {
+    background-color: #ffedca;
+    color: #260000;
+}
+
+#foamed-milk {
+    background-color: #ffedca;
+    color: #260000;
+}
+
+#vanilla-sugar {
+    background-color: #ffb980;
+    color: #260000;
+}
+
+#cream {
+    background-color: #ffedca;
+    color: #260000;
+}
+
+#results-section {
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+#results-button {
+    width: 250px;
 }

@@ -21,12 +21,82 @@ h2 {
 
 .each-drink {
     width: 30%;
+    max-height: 180px;
     border: solid 2px #223f4a;
     border-radius: 5px;
-    transition: all .2s ease-in-out
+    transition: all .2s ease-in-out;
+    padding: 0 10px;
+}
+
+.featured-drink {
+    max-height: 400px;
+    transform: scale(1.6);
 }
 
 .each-drink:hover {
-    transform: scale(1.5);
+    transform: scale(1.2);
     background-color: white;
+}
+
+.brown {
+    background-color: #603914;
+    color: white;
+    text-transform: uppercase;
+    padding: 4px;
+    margin-bottom: 5px;
+}
+
+.coffee {
+    background-color: #260000;
+    color: white;
+    text-transform: uppercase;
+    padding: 4px;
+    margin-bottom: 5px;
+}
+
+.blue {
+    background-color: #B3DFE0;
+    color: white;
+    text-transform: uppercase;
+    padding: 4px;
+    margin-bottom: 5px;
+}
+
+.milk {
+    background-color: #FFD7B0;
+    color: white;
+    text-transform: uppercase;
+    padding: 4px;
+    margin-bottom: 5px;
+}
+
+.foam {
+    background-color: #FFEDCA;
+    color: #603914;
+    text-transform: uppercase;
+    padding: 4px;
+    margin-bottom: 5px;
+}
+
+.chocolate {
+    background-color: #3A1E07;
+    color: white;
+    text-transform: uppercase;
+    padding: 4px;
+    margin-bottom: 5px;
+}
+
+.vanilla {
+    background-color: #FFB980;
+    color: white;
+    text-transform: uppercase;
+    padding: 4px;
+    margin-bottom: 5px;
+}
+
+.whipped {
+    background-color: #FFEDCA;
+    color: #603914;
+    text-transform: uppercase;
+    padding: 4px;
 }
