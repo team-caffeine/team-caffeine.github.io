@@ -10,7 +10,7 @@ h2 {
     display: none;
 }
 
-#all-drinks {
+.all-drinks {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -21,7 +21,8 @@ h2 {
 
 .each-drink {
     width: 30%;
-    max-height: 180px;
+    height: 180px;
+    /* max-height: 180px; */
     border: solid 2px #223f4a;
     border-radius: 5px;
     transition: all .2s ease-in-out;
@@ -29,8 +30,10 @@ h2 {
 }
 
 .featured-drink {
-    max-height: 400px;
-    transform: scale(1.6);
+    height: 350px;
+    transform: translate(50px, -100px);
+    /* transform: scale(1.6); */
+    z-index: 5;
 }
 
 .each-drink:hover {

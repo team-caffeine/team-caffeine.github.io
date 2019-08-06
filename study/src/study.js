@@ -7,7 +7,7 @@ for(let i = 0; i < eachDrink.length; i++) {
     drink.addEventListener('click', () => {
         drinkDescription.classList.remove('hidden');
         drink.classList.add('featured-drink');
-        drink.addEventListener('mouseout', () => {
+        drink.addEventListener('mouseleave', () => {
             drinkDescription.classList.add('hidden');
             drink.classList.remove('featured-drink');
         });
