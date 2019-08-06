@@ -16,6 +16,31 @@ main {
 
 #order-display img {
     width: 300px;
+    display: inline-block;
+}
+
+#order-display h2 {
+    position: absolute;
+    top: 50%;
+    left: 7%;
+}
+
+#order-display hr {
+    position: absolute;
+    width: 12%;
+    bottom: 40%;
+    left: 7%;
+    background-color: black;
+    height: 3px;
+}
+
+#order-display form {
+    position: absolute;
+    left: 7%;
+    top: 60%;
+    text-align: left;
+    font-family: Roboto;
+    color: #223f4a
 }
 
 #cup-display img {
@@ -54,4 +79,5 @@ main {
 #ingredient-container {
     display: flex;
     flex-direction: column;
+    margin-top: -1px;
 }
