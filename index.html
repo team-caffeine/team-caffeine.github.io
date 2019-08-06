@@ -38,31 +38,36 @@
         </section>
 
         <section id="register-form">
-            <h2>Sign In</h2>
-            <label>Name: 
-                <input type="text">
-            </label>
-            <p>Choose Your Character:</p>
-            <label>
-                <img class="barista-button" src="/assets/barista1.png">
-                <input type="radio" class="radio-input" name="barista">
-            </label>
-            <label>
-                <img class="barista-button" src="/assets/barista2.png">
-                <input type="radio" class="radio-input" name="barista">
-            </label>
-            <label>
-                <img class="barista-button" src="/assets/barista3.png">
-                <input type="radio" class="radio-input" name="barista">
-            </label>
-            <br>
-            <button>Just Brew it!</button>
+            <form id="user-form">
+                <h2>Sign In</h2>
+                <label>Name: 
+                    <input type="text" id="name" name="name">
+                </label>
+                <p>Choose Your Character:</p>
+                <label>
+                    <img class="barista-button" src="/assets/barista1.png">
+                    <input type="radio" class="radio-input" name="barista" value="hipster-1">
+                </label>
+                <label>
+                    <img class="barista-button" src="/assets/barista2.png">
+                    <input type="radio" class="radio-input" name="barista" value="hipster-2">
+                </label>
+                <label>
+                    <img class="barista-button" src="/assets/barista3.png">
+                    <input type="radio" class="radio-input" name="barista" value="hipster-3">
+                </label>
+                <br>
+                <button id="play-button">Just Brew it!</button>
+            </form>
         </section>
     </main>
 
     <footer>
         <p>Made by <a class="about-me-link" href="../about-us/about-us.html">Team Caffeine</a></p>
     </footer>
+
+    <script type="module" src="src/user.js"></script>
+    <script type="module" src="src/home.js"></script>
     
 </body>
 </html>
