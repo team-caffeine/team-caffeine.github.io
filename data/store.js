@@ -1,4 +1,4 @@
-// import drinks from './drinks.js';
+import drinks from './drinks.js';
 
 const store = {
     storage: window.localStorage,
@@ -11,6 +11,14 @@ const store = {
         const item = JSON.parse(json);
         return item;
     },
+    getDrinks(){
+        let masterDrinksList = store.get('drinks');
+        if(!masterDrinksList) {
+            store.save('drinks', drinks);
+            masterDrinksList = drinks;
+        }
+        return masterDrinksList;
+    }
 };
 
 export default store;

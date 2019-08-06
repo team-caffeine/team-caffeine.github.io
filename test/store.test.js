@@ -1,4 +1,4 @@
-// import drinks from '../data/drinks.js';
+import drinks from '../data/drinks.js';
 import store from '../data/store.js';
 
 const test = QUnit.test;
@@ -26,8 +26,8 @@ test('get drinks date and saves it to local storage', (assert) => {
 
 test('verify that the drink info is pulling correctly', (assert) => {
     //act
-    const drinksList = store.getDrinks();
+    const masterDrinksList = store.getDrinks();
 
     //assert
-    
+    assert.deepEqual(masterDrinksList, drinks);
 });
