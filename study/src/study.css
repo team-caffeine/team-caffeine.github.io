@@ -1,0 +1,32 @@
+.study-drink {
+    width: 30%;
+}
+
+h2 {
+    /* margin-bottom: -30px; */
+}
+
+.hidden {
+    display: none;
+}
+
+#all-drinks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    height: 600px;
+}
+
+.each-drink {
+    width: 30%;
+    border: solid 2px #223f4a;
+    border-radius: 5px;
+    transition: all .2s ease-in-out
+}
+
+.each-drink:hover {
+    transform: scale(1.5);
+    background-color: white;
+}

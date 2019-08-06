@@ -1,0 +1,28 @@
+#about-us-main {
+    width: 90%;
+}
+
+.about-us-image {
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    object-fit: cover;
+    object-position: 0px 0px;
+}
+
+ #about-us {
+     display: flex;
+     justify-content: space-evenly;
+ }
+
+.about-us-section-div {
+    margin-top: 100px;
+}
+
+.about-me-header {
+    margin-top: 20px;
+}
+
+.about-me-paragraph {
+    max-width: 350px;
+}
