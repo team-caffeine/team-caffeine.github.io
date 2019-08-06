@@ -45,4 +45,4 @@ test('save user info and verify it is correct', (assert) => {
 
     //assert
     assert.deepEqual(result, user);
-})
+});
