@@ -39,7 +39,14 @@ li {
 h1, h2, h3, h4 {
     font-family: 'Oswald', sans-serif;
     color: #223f4a;
-    
+}
+
+h1 {
+    margin-top: 50px;
+}
+
+#register-form h2 {
+    margin-top: 5px;
 }
 
 header h1 {
@@ -80,6 +87,9 @@ header h1 {
     margin-right: 15px;
 }
 
+input {
+    font-family: 'Roboto', sans-serif;
+}
 
 footer {
     margin-top: 100px;
@@ -87,7 +97,7 @@ footer {
     background-color: #b07002f7;
     padding: 10px 0;
     color: white;
-    position: fixed;
+    /* position: absolute; */
     bottom: 0;
     width: 100%;
     font-size: 12px;
@@ -130,14 +140,20 @@ button {
     font-size: 14px;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 .barista-button {
-    width: 18%;
-    height: 18%;
+    width: 14%;
+    height: 14%;
+    margin-bottom: 15px;
 }
 
 .barista-button:hover {
     cursor: pointer;
-
+    border: 2px solid #223f4a;
+    border-radius: 100%;
 }
 
 .user-name-icon {
