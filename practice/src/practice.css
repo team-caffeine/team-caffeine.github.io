@@ -1,7 +1,7 @@
 
 main {
     display: flex;
-    width: 100%;
+    width: 85%;
     justify-content: space-around;
     flex-wrap: wrap;
     flex-direction: row;
@@ -13,44 +13,23 @@ main {
     margin-top: 50px;
 }
 
-#order-display img {
-    width: 300px;
-    display: inline-block;
-}
-
-#order-display h2 {
-    position: absolute;
-    top: 50%;
-    left: 7%;
-}
-
-#order-display hr {
-    position: absolute;
-    width: 12%;
-    bottom: 40%;
-    left: 7%;
-    background-color: black;
-    height: 3px;
-}
-
-#order-display form {
-    position: absolute;
-    left: 7%;
-    top: 60%;
+#order-display {
+    background-image: url('/assets/notepadpaper.png');
+    width: 275px;
+    padding-top: 75px;
     text-align: left;
-    font-family: Roboto;
-    color: #223f4a
+    padding-left: 50px;
 }
 
-#cup-display img {
-    width: 400px;
-}
 
 #cup-display {
-    padding: 50px;
-    background-color: rgb(255, 255, 255, 0.4);
-    border-radius: 10px;
+    background-image: url('/assets/emptycup.png');
+    background-size: contain;
+    width: 400px;
+    height: 400px;
     align-self: center;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .ingredient-buttons {
