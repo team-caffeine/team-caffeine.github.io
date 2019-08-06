@@ -99,13 +99,13 @@ main {
 }
 
 .logo {
-    width: 12%;
+    width: 50%;
 }
 
 #logo {
     display: flex;
     align-items: center;
-    margin-right: -700px;
+    max-width: 215px;
 }
 
 section {
