@@ -61,13 +61,14 @@ main {
     text-transform: uppercase;
     border-radius: 8px;
     font-size: 14px;
-    width: 200px;
+    width: 250px;
     margin-bottom: 3px;
+    font-weight: 700;
 }
 
 .ingredient-buttons:hover {
-    background-color: #f0bb29;
     cursor: pointer;
+    box-shadow: 0 5px 15px rgba(96,57,19,0.5);
 }
 
 #ingredient-nav {
@@ -80,4 +81,52 @@ main {
     display: flex;
     flex-direction: column;
     margin-top: -1px;
+    text-align: left;
+}
+
+#drip-coffee {
+    background-color: #260000;
+}
+
+#espresso {
+    background-color: #603913;
+}
+
+#cocoa {
+    background-color: #3a1e07;
+}
+
+#water {
+    background-color: #b3dfe0;
+    color: #260000;
+}
+
+#half-and-half {
+    background-color: #ffd7b0;
+    color: #260000;
+}
+
+#steamed-milk {
+    background-color: #ffd7b0;
+    color: #260000;
+}
+
+#whipped-cream {
+    background-color: #ffedca;
+    color: #260000;
+}
+
+#foamed-milk {
+    background-color: #ffedca;
+    color: #260000;
+}
+
+#vanilla-sugar {
+    background-color: #ffb980;
+    color: #260000;
+}
+
+#cream {
+    background-color: #ffedca;
+    color: #260000;
 }
