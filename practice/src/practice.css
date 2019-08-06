@@ -6,7 +6,6 @@ main {
     flex-wrap: wrap;
     flex-direction: row;
     margin-top: 2%;
-    margin-bottom: 10%;
 }
 
 #title {
@@ -129,4 +128,13 @@ main {
 #cream {
     background-color: #ffedca;
     color: #260000;
+}
+
+#results-section {
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+#results-button {
+    width: 250px;
 }
