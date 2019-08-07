@@ -75,9 +75,31 @@ test('add new product to inventory', assert => {
         price: 13.00,
         cost: 6.00,
     };
-   //act
-    store.addProduct(product);
-    const products = store.getProducts();
-   //assert
-    assert.deepEqual(products[products.length - 1], product);
+
+    //act
+    store.saveUser(user);
+    const result = store.getUser();
+
+    //assert
+    assert.deepEqual(result, user);
+});
+test('saves an drink and pulls it from memory', (assert) => {
+    const drink = {
+        id: 'americano',
+        name: 'Americano',
+        ingredients: ['espresso', 'water'],
+    };
+    store.saveSelectedDrink(drink);
+    const result = store.getSelectedDrink();
+
+    assert.deepEqual(result, drink);
+});
+test('saves clicked ingredient and pulls it from memory', (assert) => {
+    const ingredient = 'espresso';
+
+    store.saveResults(ingredient);
+    const result = store.getIngredient();
+
+    assert.deepEqual(result, ingredient);
+
 });
