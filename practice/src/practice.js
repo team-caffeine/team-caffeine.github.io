@@ -12,6 +12,10 @@ makeDrinkButton.addEventListener('click', (event) => {
     event.preventDefault();
     selectedDrink = store.getSelectedDrink();
     drinkId = store.getDrinkId();
+    for(let i = 0; i < ingredients.length; i++) {
+        ingredients[i].classList.add('hidden');
+        index = 0; 
+    }
 });
 
 let index = 0;
