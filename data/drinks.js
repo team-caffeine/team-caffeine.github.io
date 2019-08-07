@@ -4,6 +4,7 @@ const drinks = [
         name: 'Americano',
         ingredients: ['espresso', 'water'],
         description: 'Caffe Americano is a type of coffee drink prepared by diluting an espresso with hot water, giving it a similar strength to, but different flavor from, traditionally brewed coffee',
+        image: 'assets/coffee/americano.png',
     },
     {
         id: 'cafe-latte',
