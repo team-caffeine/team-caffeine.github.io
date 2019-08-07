@@ -31,8 +31,13 @@ for(let j = 0; j < ingredientButton.length; j++) {
             for(let i = 0; i < ingredients.length; i++) {
                 ingredients[i].classList.add('hidden'); 
             }
+            cupDisplay.classList.add('on-wrong');
             resultsMessage.textContent = 'You messed up the drink, try again!';
-            // console.log('you lose you friggin loser');
+            setTimeout(function() { 
+                resultsMessage.textContent = '';
+                cupDisplay.classList.remove('on-wrong');
+            }, 1000);
+        
         }
         if(index === selectedDrink.length) {
             resultsMessage.textContent = 'Nice, you made it!';
@@ -43,7 +48,7 @@ for(let j = 0; j < ingredientButton.length; j++) {
                     resultsMessage.textContent = '';
                     cupDisplay.classList.remove('on-win');
                 }
-            }, 2500);
+            }, 1200);
         } 
 
     });
