@@ -26,3 +26,11 @@
 .about-me-paragraph {
     max-width: 350px;
 }
+
+#user-avatar {
+    transition: all .1s; 
+}
+
+#user-avatar:hover {
+    transform: scale(1.1);
+}

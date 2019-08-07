@@ -103,3 +103,11 @@ h2 {
     text-transform: uppercase;
     padding: 4px;
 }
+
+#user-avatar {
+    transition: all .1s; 
+}
+
+#user-avatar:hover {
+    transform: scale(1.1);
+}
