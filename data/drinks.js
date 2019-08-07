@@ -18,42 +18,49 @@ const drinks = [
         name: 'Breve',
         ingredients: ['espresso', 'half-and-half-milk', 'milk-foam'],
         description: 'Made like a cappuccino, but with steamed half-and-half instead of milk. This produces a very creamy foam.',
+        image: 'assets/coffee/breve.png',
     },
     {
         id: 'flat-white',
         name: 'Flat White',
         ingredients: ['espresso', 'steamed-milk'],
         description: 'Consisting of espresso with microfoam. It is comparable to a latte, but smaller in volume and with less microfoam, therefore having a higher proportion of coffee to milk.',
+        image: 'assets/coffee/flatwhite.png',
     },
     {
         id: 'macchiato',
         name: 'Macchiato',
         ingredients: ['espresso', 'milk-foam'],
         description: 'Sometimes called espresso macchiato, is an espresso coffee drink with a small amount of milk, usually foamed',
+        image: 'assets/coffee/macchiato.png',
     },
     {
         id: 'mocha',
         name: 'Mocha',
         ingredients: ['espresso', 'chocolate', 'steamed-milk', 'whipped-cream'],
         description: 'Also called mocaccino, is a chocolate-flavored variant of a caffè latte.',
+        image: 'assets/coffee/mocha.png',
     },
     {
         id: 'raf-coffee',
         name: 'Raf Coffee',
         ingredients: ['espresso', 'vanilla-sugar', 'cream'],
         description: 'Invented circa 1996 at one of Moscow\'s first cafés, this is one of the most popular drinks in nearly every café in the Russian capital.',
+        image: 'assets/coffee/rafcoffee.png',
     },
     {
         id: 'red-eye',
         name: 'Red Eye',
         ingredients: ['espresso', 'drip-coffee'],
         description: 'A red eye is a fortified coffee drink in which espresso is combined with normal drip coffee',
+        image: 'assets/coffee/redeyecoffee.png',
     },
     {
         id: 'vienna-coffee',
         name: 'Vienna Coffee',
         ingredients: ['espresso', 'whipped-cream'],
         description: 'Made by preparing two shots of strong black espresso in a standard sized coffee cup and infusing the coffee with whipped cream until the cup is full.',
+        image: 'assets/coffee/viennacoffee.png',
     }
 ];
 export default drinks;

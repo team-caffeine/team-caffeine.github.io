@@ -1,15 +1,21 @@
 const sessionFinishedDrinks = [{
     id: 'cafe-latte',
-    completed: 4,
+    quantity: 4,
 }, {
     id: 'americano',
-    completed: 6,
+    quantity: 6,
 }, {
     id: 'flat-white',
-    completed: 2,
+    quantity: 2,
 }, {
     id: 'mocha',
-    completed: 3,
+    quantity: 3,
+}, {
+    id: 'red-eye',
+    quantity: 10,
+}, {
+    id: 'vienna-coffee',
+    quantity: 6,
 }];
 
 export default sessionFinishedDrinks;
