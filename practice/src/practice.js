@@ -1,16 +1,8 @@
 import store from '../../data/store.js';
-import { userSelectedDrink } from './render-cups.js';
 
 const ingredients = document.getElementsByClassName('ingredients');
-console.log(ingredients);
-const ingredientOne = document.getElementById('ingredient-0');
-const ingredientTwo = document.getElementById('ingredient-2');
-const ingredientThree = document.getElementById('ingredient-3');
-const ingredientFour = document.getElementById('ingredient-4');
-const ingredientsInCup = document.getElementById('ingredients-in-cup');
 const makeDrinkButton = document.getElementById('make-drink');
 
-let currentDrink = [];
 let selectedDrink;
 let drinkId;
 
@@ -26,30 +18,43 @@ for(let j = 0; j < ingredientButton.length; j++) {
     const clickedIngredient = ingredientButton[j];
     clickedIngredient.addEventListener('click', () => {
         let ingredient = event.currentTarget;
-        console.log(ingredient);
         const currentIngredient = ingredient.id;
-        console.log(currentIngredient, selectedDrink[index]);
         if(currentIngredient === selectedDrink[index]) {
             ingredients[ingredients.length - 1 - index].classList.remove('hidden');
             ingredients[ingredients.length - 1 - index].src = '../assets/ingredients/' + drinkId + '/' + selectedDrink[index] + '.png';
             index++;
-            console.log(index);
-            console.log(ingredients[ingredients.length - 1 - index]);
         }
-        // if(currentIngredient === selectedDrink[index]) {
-        //     ingredients[ingredients.length - 1 - index].classList.remove('hidden');
-        //     ingredients[ingredients.length - 1 - index].src = '../assets/ingredients/' + drinkId + '/' + selectedDrink[index] + '.png';
-        //     index++;
-        // }
-        
-
-
-
-
-
-
+        if(index === selectedDrink.length) {
+            setTimeout(function() { index = 0; 
+                for(let i = 0; i < ingredients.length; i++) {
+                    ingredients[i].classList.add('hidden'); 
+                }
+            }, 5000);
+        }
 
     });
+
+    // function reset() {
+    //     index = 0;
+    // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         
@@ -71,7 +76,7 @@ for(let j = 0; j < ingredientButton.length; j++) {
 //         if(currentDrink.length === selectedDrink.length) {
 //             console.log('you win!');
 //             currentDrink = [];
-//             ingredientOne.classList.add('hidden');
+            
 //             ingredientTwo.classList.add('hidden');
 //             ingredientThree.classList.add('hidden');
 //             ingredientFour.classList.add('hidden');
