@@ -14,7 +14,7 @@ test('render user profile', assert => {
     };
     // act
     const drink = findDrink(drinks, lineItem.id);
-    const expected = '<div class="result-item"><img class="results-image" src="../assets/coffee/americano.png"><p>12 Americano</p></div>';
+    const expected = '<div id="all-time-drinks" class="result-item"><img class="results-image" src="../assets/coffee/americano.png"><p>12 Americano</p></div>';
 
     const dom = renderAllTimeProfile(lineItem, drink);
     const html = dom.outerHTML;

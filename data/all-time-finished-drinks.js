@@ -1,9 +1,9 @@
 const finishedDrinks = [{
     id: 'cafe-latte',
-    completed: 9,
+    quantity: 9,
 }, {
     id: 'americano',
-    completed: 12,
+    quantity: 12,
 }];
 
 export default finishedDrinks;

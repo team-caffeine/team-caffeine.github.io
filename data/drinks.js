@@ -8,9 +8,10 @@ const drinks = [
     },
     {
         id: 'cafe-latte',
-        name: 'Caffè Latte',
+        name: 'Cafè Latte',
         ingredients: ['espresso', 'steamed-milk', 'milk-foam'],
         description: 'Caffè latte is typically prepared in a 8 fl oz glass or cup with one standard shot of espresso and filled with steamed milk, with a layer of foamed milk approximately 1⁄2 in thick on the top.',
+        image: 'assets/coffee/cafelatte.png',
     },
     {
         id: 'breve',
