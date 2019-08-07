@@ -46,22 +46,3 @@ test('save user info and verify it is correct', (assert) => {
     //assert
     assert.deepEqual(result, user);
 });
-test('saves an drink and pulls it from memory', (assert) => {
-    const drink = {
-        id: 'americano',
-        name: 'Americano',
-        ingredients: ['espresso', 'water'],
-    };
-    store.saveSelectedDrink(drink);
-    const result = store.getSelectedDrink();
-
-    assert.deepEqual(result, drink);
-});
-test('saves clicked ingredient and pulls it from memory', (assert) => {
-    const ingredient = 'espresso';
-
-    store.saveResults(ingredient);
-    const result = store.getIngredient();
-
-    assert.deepEqual(result, ingredient);
-});
