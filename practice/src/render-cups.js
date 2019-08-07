@@ -16,8 +16,8 @@ export function getSelectedDrink() {
         coffee.addEventListener('change', function() {
             const drinkToMake = findDrink(drinks, coffeeInputs[i].value);
             const ingredients = drinkToMake.ingredients;
-            // console.log(ingredients);
-            store.saveSelectedDrink(ingredients);
+            const drinkId = drinkToMake.id;
+            store.saveSelectedDrink(ingredients, drinkId);
         });
     }
 }

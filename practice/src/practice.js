@@ -1,10 +1,12 @@
 import store from '../../data/store.js';
 import { getSelectedDrink } from './render-cups.js';
 
-const ingredientOne = document.getElementById('ingredient-1');
+
+const ingredientOne = document.getElementById('ingredient-0');
 const ingredientTwo = document.getElementById('ingredient-2');
 const ingredientThree = document.getElementById('ingredient-3');
 const ingredientFour = document.getElementById('ingredient-4');
+const ingredientsInCup = document.getElementById('ingredients-in-cup');
 
 // const ingredientButton = document.getElementsByClassName('ingredient-buttons');
 
@@ -34,6 +36,7 @@ const ingredientFour = document.getElementById('ingredient-4');
 
 let currentDrink = [];
 const selectedDrink = store.getSelectedDrink();
+const drinkId = store.getDrinkId();
 
 const ingredientButton = document.getElementsByClassName('ingredient-buttons');
 for(let i = 0; i < ingredientButton.length; i++) {
@@ -48,12 +51,22 @@ for(let i = 0; i < ingredientButton.length; i++) {
         console.log(selectedDrink);
 
         if(currentDrink[0] === selectedDrink[0]) {
-            ingredientOne.src = '../assets/ingredients/' + selectedDrink[0] + '.png';
+            ingredientOne.src = '../assets/ingredients/' + drinkId + '/' + selectedDrink[0] + '.png';
         } else {
             return;
         }
         if(currentDrink[1] === selectedDrink[1]) {
-            ingredientTwo.src = '../assets/ingredients/' + selectedDrink[1] + '.png';
+            ingredientTwo.src = '../assets/ingredients/' + drinkId + '/' + selectedDrink[1] + '.png';
+        } else {
+            return;
+        }
+        if(currentDrink[2] === selectedDrink[2]) {
+            ingredientThree.src = '../assets/ingredients/' + drinkId + '/' + selectedDrink[2] + '.png';
+        } else {
+            return;
+        }
+        if(currentDrink[3] === selectedDrink[3]) {
+            ingredientFour.src = '../assets/ingredients/' + drinkId + '/' + selectedDrink[3] + '.png';
         } else {
             return;
         }
