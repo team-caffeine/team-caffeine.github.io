@@ -49,11 +49,19 @@ main {
     margin-top: 4px;
 }
 
-#ingredient-1 {
-    width: 68%;
-    margin-bottom: -30px;
+/* #ingredient-1-div {
+    width: 272px;
+    height: 65px; */
+    /* margin-bottom: -30px;
     margin-right: 22px;
-    margin-top: 4px;
+    margin-top: 4px; */
+}
+
+#ingredient-1 {
+    width: 272px;
+    height: 65px;
+    /* margin-right: 22px;
+    margin-top: 4px; */
 }
 
 /* buttons CSS */
