@@ -23,6 +23,12 @@ for(let j = 0; j < ingredientButton.length; j++) {
             ingredients[ingredients.length - 1 - index].classList.remove('hidden');
             ingredients[ingredients.length - 1 - index].src = '../assets/ingredients/' + drinkId + '/' + selectedDrink[index] + '.png';
             index++;
+        } else {
+            index = 0; 
+            for(let i = 0; i < ingredients.length; i++) {
+                ingredients[i].classList.add('hidden'); 
+            }
+            console.log('you lose you friggin loser');
         }
         if(index === selectedDrink.length) {
             setTimeout(function() { index = 0; 
@@ -30,13 +36,10 @@ for(let j = 0; j < ingredientButton.length; j++) {
                     ingredients[i].classList.add('hidden'); 
                 }
             }, 5000);
-        }
+        } 
 
     });
 
-    // function reset() {
-    //     index = 0;
-    // }
 
 
 
