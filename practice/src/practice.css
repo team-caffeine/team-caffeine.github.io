@@ -49,11 +49,19 @@ main {
     margin-top: 4px;
 }
 
-#ingredient-1 {
-    width: 68%;
+/* #ingredient-1-div {
+    width: 272px;
+    height: 65px;
     margin-bottom: -30px;
     margin-right: 22px;
     margin-top: 4px;
+} */
+
+#ingredient-1 {
+    width: 272px;
+    height: 65px;
+    /* margin-right: 22px;
+    margin-top: 4px; */
 }
 
 /* buttons CSS */
@@ -149,4 +157,12 @@ main {
 #results-button:hover {
     cursor: pointer;
     box-shadow: 0 5px 15px rgba(96,57,19,0.5);
+}
+
+#user-avatar {
+    transition: all .1s; 
+}
+
+#user-avatar:hover {
+    transform: scale(1.1);
 }

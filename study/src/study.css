@@ -2,9 +2,9 @@
     width: 30%;
 }
 
-h2 {
-    /* margin-bottom: -30px; */
-}
+/* h2 {
+    margin-bottom: -30px;
+} */
 
 .hidden {
     display: none;
@@ -102,4 +102,12 @@ h2 {
     color: #603914;
     text-transform: uppercase;
     padding: 4px;
+}
+
+#user-avatar {
+    transition: all .1s; 
+}
+
+#user-avatar:hover {
+    transform: scale(1.1);
 }

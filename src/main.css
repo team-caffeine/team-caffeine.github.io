@@ -143,6 +143,8 @@ button {
 
 button:hover {
     cursor: pointer;
+    /* color: #f0bb29; */
+    background-color: #223f4ada;
 }
 
 .barista-button {
@@ -151,11 +153,9 @@ button:hover {
     margin-bottom: 15px;
 }
 
-/* .barista-button:hover {
+.barista-button:hover {
     cursor: pointer;
-    border: 2px solid #223f4a;
-    border-radius: 100%;
-} */
+}
 
 .border {
     border: 3px solid #223f4a;
