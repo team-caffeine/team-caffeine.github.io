@@ -5,3 +5,11 @@
 #user-avatar:hover {
     transform: scale(1.1);
 }
+
+.profile-name-link {
+    text-decoration: none;
+}
+
+#profile:hover {
+    color: #f0bb29;
+}
