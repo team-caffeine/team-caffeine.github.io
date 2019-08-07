@@ -182,3 +182,29 @@ button:hover {
 .hidden {
     display: none;
 }
+ 
+#user-name-input {
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid #eee;
+    width: 150px;
+    transition: all 0.1s;
+    margin-left: 8px;
+    font-size: 16px;
+    padding: 2px;
+    text-align: center;
+}
+
+#user-name-input:hover {
+    transform: scale(1.1);
+    border: 1px solid #f0bb29;
+}
+
+#user-name-input:focus {
+    outline: 0;
+}
+
+#user-signin-div {
+    vertical-align: middle;
+    height: 20px;
+}
