@@ -2,6 +2,8 @@ import store from '../../data/store.js';
 
 const ingredients = document.getElementsByClassName('ingredients');
 const makeDrinkButton = document.getElementById('make-drink');
+const resultsMessage = document.getElementById('results-message');
+const cupDisplay = document.getElementById('cup-display');
 
 let selectedDrink;
 let drinkId;
@@ -17,6 +19,7 @@ const ingredientButton = document.getElementsByClassName('ingredient-buttons');
 for(let j = 0; j < ingredientButton.length; j++) {
     const clickedIngredient = ingredientButton[j];
     clickedIngredient.addEventListener('click', () => {
+        resultsMessage.textContent = '';
         let ingredient = event.currentTarget;
         const currentIngredient = ingredient.id;
         if(currentIngredient === selectedDrink[index]) {
@@ -28,14 +31,19 @@ for(let j = 0; j < ingredientButton.length; j++) {
             for(let i = 0; i < ingredients.length; i++) {
                 ingredients[i].classList.add('hidden'); 
             }
-            console.log('you lose you friggin loser');
+            resultsMessage.textContent = 'You messed up the drink, try again!';
+            // console.log('you lose you friggin loser');
         }
         if(index === selectedDrink.length) {
+            resultsMessage.textContent = 'Nice, you made it!';
+            cupDisplay.classList.add('on-win');
             setTimeout(function() { index = 0; 
                 for(let i = 0; i < ingredients.length; i++) {
                     ingredients[i].classList.add('hidden'); 
+                    resultsMessage.textContent = '';
+                    cupDisplay.classList.remove('on-win');
                 }
-            }, 5000);
+            }, 2500);
         } 
 
     });
