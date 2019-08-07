@@ -1,6 +1,7 @@
 import drinks from './drinks.js';
 
 const SAVED_INGREDIENTS = 'ingredient-list';
+const SELECTED_DRINK = 'selected-drink';
 
 const store = {
     storage: window.localStorage,
@@ -33,6 +34,15 @@ const store = {
     },
     saveResults(ingredient) {
         store.save(SAVED_INGREDIENTS, ingredient);
+    },
+    getSelectedDrink(){
+        const json = store.storage.getItem(SELECTED_DRINK);
+        if(!json) return null;
+        let drink = JSON.parse(json);
+        return drink;
+    }, 
+    saveSelectedDrink(drink) {
+        store.save(SELECTED_DRINK, drink);
     },
     getIngredient() {
         const json = store.storage.getItem(SAVED_INGREDIENTS);
