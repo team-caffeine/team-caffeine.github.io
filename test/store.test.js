@@ -1,5 +1,5 @@
 import drinks from '../data/drinks.js';
-import store from '../data/store.js';
+import { store } from '../data/store.js';
 
 const test = QUnit.test;
 

@@ -1,4 +1,4 @@
-import store from '../../data/store.js';
+import { store, sessionStore } from '../../data/store.js';
 
 const ingredients = document.getElementsByClassName('ingredients');
 const makeDrinkButton = document.getElementById('make-drink');
@@ -59,7 +59,7 @@ for(let j = 0; j < ingredientButton.length; j++) {
                 }
             }, 1200);
             store.countDrink(store.getDrinkId());
-            // sessionStore.countDrink(store.getDrinkId());
+            sessionStore.countDrink(store.getDrinkId());
 
         } 
 

@@ -1,4 +1,4 @@
-import store from '../data/store.js';
+import { store } from '../data/store.js';
 
 const userName = document.getElementById('profile');
 const userAvatar = document.getElementById('user-avatar');
