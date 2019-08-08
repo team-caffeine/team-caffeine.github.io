@@ -9,7 +9,6 @@ body {
 }
 
 header {
-    /* padding: 50px; */
     margin: 0;
     padding-top: 5px;
     background-color: #b07002f7;
@@ -72,7 +71,6 @@ header h1 {
 }
 
 #profile-section {
-    /* visibility: hidden; */
     max-width: 250px;
     display: flex;
     align-items: center;
@@ -98,7 +96,6 @@ footer {
     background-color: #b07002f7;
     padding: 10px 0;
     color: white;
-    /* position: absolute; */
     bottom: 0;
     width: 100%;
     font-size: 12px;
@@ -143,7 +140,6 @@ button {
 
 button:hover {
     cursor: pointer;
-    /* color: #f0bb29; */
     background-color: #223f4ada;
 }
 

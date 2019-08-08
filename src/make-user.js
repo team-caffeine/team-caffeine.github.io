@@ -5,5 +5,4 @@ function makeUser(formData) {
     };
     return user;
 }
-
 export default makeUser;

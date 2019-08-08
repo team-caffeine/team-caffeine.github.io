@@ -9,7 +9,6 @@ const emptyCup = document.getElementById('empty-cup');
 let selectedDrink;
 let drinkId;
 
-
 makeDrinkButton.addEventListener('click', (event) => {
     event.preventDefault();
     makeDrinkButton.classList.remove('on-select-drink');
@@ -21,7 +20,6 @@ makeDrinkButton.addEventListener('click', (event) => {
         ingredients[i].classList.add('hidden');
         index = 0; 
     }
-    
 });
 
 let index = 0;
@@ -50,7 +48,6 @@ for(let j = 0; j < ingredientButton.length; j++) {
                 resultsMessage.textContent = '';
                 cupDisplay.classList.remove('on-wrong');
             }, 1000);
-        
         }
         if(index === selectedDrink.length) {
             resultsMessage.textContent = 'Nice, you made it!';
@@ -64,100 +61,6 @@ for(let j = 0; j < ingredientButton.length; j++) {
             }, 1200);
             store.countDrink(store.getDrinkId());
             sessionStore.countDrink(store.getDrinkId());
-
         } 
-
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-//         ingredient.id;
-//         // console.log(ingredient.id);
-//         currentDrink.push(ingredient.id);
-//         console.log(currentDrink);
-//         console.log(selectedDrink);
-        
-//         if(currentDrink[0] === selectedDrink[0] && currentDrink.length <= selectedDrink.length) {
-            // ingredientOne.classList.remove('hidden');
-            // ingredientOne.src = '../assets/ingredients/' + drinkId + '/' + selectedDrink[0] + '.png';
-//         } 
-//         if(currentDrink[1] === selectedDrink[1] && currentDrink.length <= selectedDrink.length) {
-//             ingredientTwo.classList.remove('hidden');
-//             ingredientTwo.src = '../assets/ingredients/' + drinkId + '/' + selectedDrink[1] + '.png';
-//             console.log(currentDrink.length);
-//         } 
-//         if(currentDrink.length === selectedDrink.length) {
-//             console.log('you win!');
-//             currentDrink = [];
-            
-//             ingredientTwo.classList.add('hidden');
-//             ingredientThree.classList.add('hidden');
-//             ingredientFour.classList.add('hidden');
-//         }
-//         if(!selectedDrink[2]) {
-//             ingredientButton.disabled = true;
-//             // ADD BUTTON DISABLE FUNCTION
-//             return;
-//         }
-//         if(currentDrink[2] === selectedDrink[2]) {
-//             ingredientThree.classList.remove('hidden');
-//             ingredientThree.src = '../assets/ingredients/' + drinkId + '/' + selectedDrink[2] + '.png';
-//         } 
-//         if(currentDrink.length === selectedDrink.length) {
-//             console.log('you win!');
-//             currentDrink = [];
-//             ingredientOne.classList.add('hidden');
-//             ingredientTwo.classList.add('hidden');
-//             ingredientThree.classList.add('hidden');
-//             ingredientFour.classList.add('hidden');
-//         }
-//         if(!selectedDrink[3]) {
-//             // ADD BUTTON DISABLE FUNCTION
-//             return;
-//         }
-//         if(currentDrink[3] === selectedDrink[3]) {
-//             ingredientFour.classList.remove('hidden');
-//             ingredientFour.src = '../assets/ingredients/' + drinkId + '/' + selectedDrink[3] + '.png';
-//         } 
-//         if(currentDrink.length === selectedDrink.length) {
-//             console.log('you win!');
-//             currentDrink = [];
-//             ingredientOne.classList.add('hidden');
-//             ingredientTwo.classList.add('hidden');
-//             ingredientThree.classList.add('hidden');
-//             ingredientFour.classList.add('hidden');
-//         }
-//         else {
-//             return;
-//         }
-//     });
-// }
-  
-
-
-
-// let ingredient = store.getIngredient();
-// console.log(ingredient);
-
-
-
 }

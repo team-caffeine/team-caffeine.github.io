@@ -31,9 +31,7 @@ label {
     padding-left: 50px;
 }
 
-/* ingredient images CSS */
 #cup-display {
-    /* background-image: url('/assets/emptycup.png'); */
     background-size: contain;
     width: 400px;
     height: 300px;
@@ -167,8 +165,6 @@ label {
     100%    {transform: translateY(0);}
 }
 
-/* buttons CSS */
-
 .ingredient-buttons {
     background-color: #223f4a;
     padding: 10px 15px;
@@ -249,8 +245,6 @@ h2 {
     background-color: #ffedca;
     color: #260000;
 }
-
-/* results section css */
 
 #results-section {
     margin-bottom: 10%;

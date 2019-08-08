@@ -1,4 +1,3 @@
-
 function renderRandomOrder(drink) {
 
     const label = document.createElement('label');
@@ -18,7 +17,5 @@ function renderRandomOrder(drink) {
     label.appendChild(breakLine);
 
     return label;
-
 }  
-
 export default renderRandomOrder;
