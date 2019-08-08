@@ -8,6 +8,7 @@ const cupDisplay = document.getElementById('cup-display');
 let selectedDrink;
 let drinkId;
 
+
 makeDrinkButton.addEventListener('click', (event) => {
     event.preventDefault();
     selectedDrink = store.getSelectedDrink();
@@ -53,6 +54,9 @@ for(let j = 0; j < ingredientButton.length; j++) {
                     cupDisplay.classList.remove('on-win');
                 }
             }, 1200);
+            store.countDrink(store.getDrinkId());
+            // sessionStore.countDrink(store.getDrinkId());
+
         } 
 
     });
