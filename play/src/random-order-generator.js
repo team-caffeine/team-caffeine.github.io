@@ -11,7 +11,7 @@ function getRandomDrink() {
     return randomDrink;
 }
 
-// generateRandomOrder();
+generateRandomOrder();
 
 export function generateRandomOrder() {
     const randomDrinkOrder = [];
@@ -25,9 +25,30 @@ export function generateRandomOrder() {
     randomDrinkOrder.push(randomDrinkFour);
     const randomDrinkFive = getRandomDrink();
     randomDrinkOrder.push(randomDrinkFive);
+
     return randomDrinkOrder;
 }
-// export default generateRandomOrder();
-// console.log(generateRandomOrder());
+export default generateRandomOrder();
+
+
+export function randomOrderNoDuplicates() {
+    const randomDrinkOrder = [];
+
+    while(randomDrinkOrder.length < 5) {
+        let duplicate = false;
+        const randomDrink = getRandomDrink();
+        for(let i = 0; i < randomDrinkOrder.length; i++) {
+            if(randomDrinkOrder[i] === randomDrink) {
+                duplicate = true;
+                break;
+            }
+        }
+        if(!duplicate) {
+            randomDrinkOrder.push(randomDrink);
+        }
+    }
+    return randomDrinkOrder;
+}
+// console.log(randomOrderNoDuplicates());
 
 
