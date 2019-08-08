@@ -1,18 +1,20 @@
-import { generateRandomOrder } from './random-order-generator.js';
+import { randomOrderNoDuplicates } from './random-order-generator.js';
 import renderRandomOrder from './render-random-order.js';
 import { userSelectedDrink } from '../../practice/src/render-cups.js';
 
 const startPlay = document.getElementById('start-play');
 const resultsButton = document.getElementById('results-button');
 const tryAgain = document.getElementById('try-again');
-const youLoseMessage = document.getElementById('you-lose-message');
+const resultMessage = document.getElementById('you-lose-message');
 const overlay = document.getElementById('overlay');
 const emptyCup = document.getElementById('empty-cup');
 const orderForm = document.getElementById('order-form');
 
+let interval;
+
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
-    const interval = setInterval(function() {
+    interval = setInterval(function() {
         minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
 
@@ -22,7 +24,7 @@ function startTimer(duration, display) {
         display.textContent = minutes + ':' + seconds;
 
         if(--timer < 0) {
-            youLoseMessage.textContent = 'You lose!';
+            resultMessage.textContent = 'You lose!';
             clearInterval(interval);
             overlay.classList.add('overlay-background');
             emptyCup.classList.add('hidden');
@@ -32,7 +34,7 @@ function startTimer(duration, display) {
     }, 1000);
 }
 
-const randomOrder = generateRandomOrder();
+const randomOrder = randomOrderNoDuplicates();
 
 startPlay.addEventListener('click', () => {
     for(let i = 0; i < randomOrder.length; i++) {
@@ -40,10 +42,9 @@ startPlay.addEventListener('click', () => {
         const dom = renderRandomOrder(drinkItem);
         orderForm.appendChild(dom);
     }
-    console.log(coffeeInputs);
     userSelectedDrink();
     overlay.classList.remove('overlay-background');
-    var oneMinute = 30,
+    var oneMinute = 60,
         display = document.querySelector('#timer');
     startTimer(oneMinute, display);
     startPlay.classList.add('hidden');
@@ -74,6 +75,8 @@ makeDrinkButton.addEventListener('click', (event) => {
 });
 
 let index = 0;
+let winCount = 0;
+
 const ingredientButton = document.getElementsByClassName('ingredient-buttons');
 for(let j = 0; j < ingredientButton.length; j++) {
     const clickedIngredient = ingredientButton[j];
@@ -99,12 +102,17 @@ for(let j = 0; j < ingredientButton.length; j++) {
                 resultsMessage.textContent = '';
                 cupDisplay.classList.remove('on-wrong');
             }, 1000);
-        
         }
         if(index === selectedDrink.length) {
             resultsMessage.textContent = 'Nice, you made it!';
+            winCount++;
             cupDisplay.classList.add('on-win');
-            // coffeeInputs;
+            for(let i = 0; i < coffeeInputs.length; i++) {
+                if(drinkId === coffeeInputs[i].value) {
+                    coffeeInputs[i].classList.add('hidden');
+                    coffeeInputs[i].parentElement.classList.add('strike-through');
+                }
+            }
             setTimeout(function() { index = 0; 
                 for(let i = 0; i < ingredients.length; i++) {
                     ingredients[i].classList.add('hidden'); 
@@ -114,8 +122,16 @@ for(let j = 0; j < ingredientButton.length; j++) {
             }, 1200);
             store.countDrink(store.getDrinkId());
             sessionStore.countDrink(store.getDrinkId());
-
         } 
+        // console.log(winCount);
+        if(winCount === 5) {
+            resultMessage.textContent = 'You win!';
+            clearInterval(interval);
+            overlay.classList.add('overlay-background');
+            emptyCup.classList.add('hidden');
+            resultsButton.classList.remove('hidden');
+            tryAgain.classList.remove('hidden');
+        }
 
     });
 

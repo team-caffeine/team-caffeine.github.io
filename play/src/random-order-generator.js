@@ -11,25 +11,7 @@ function getRandomDrink() {
     return randomDrink;
 }
 
-generateRandomOrder();
-
-export function generateRandomOrder() {
-    const randomDrinkOrder = [];
-    const randomDrinkOne = getRandomDrink();
-    randomDrinkOrder.push(randomDrinkOne);
-    const randomDrinkTwo = getRandomDrink();
-    randomDrinkOrder.push(randomDrinkTwo);
-    const randomDrinkThree = getRandomDrink();
-    randomDrinkOrder.push(randomDrinkThree);
-    const randomDrinkFour = getRandomDrink();
-    randomDrinkOrder.push(randomDrinkFour);
-    const randomDrinkFive = getRandomDrink();
-    randomDrinkOrder.push(randomDrinkFive);
-
-    return randomDrinkOrder;
-}
-export default generateRandomOrder();
-
+randomOrderNoDuplicates();
 
 export function randomOrderNoDuplicates() {
     const randomDrinkOrder = [];
@@ -38,7 +20,7 @@ export function randomOrderNoDuplicates() {
         let duplicate = false;
         const randomDrink = getRandomDrink();
         for(let i = 0; i < randomDrinkOrder.length; i++) {
-            if(randomDrinkOrder[i] === randomDrink) {
+            if(randomDrinkOrder[i].id === randomDrink.id) {
                 duplicate = true;
                 break;
             }
@@ -49,6 +31,4 @@ export function randomOrderNoDuplicates() {
     }
     return randomDrinkOrder;
 }
-// console.log(randomOrderNoDuplicates());
-
 

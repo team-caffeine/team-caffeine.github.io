@@ -14,6 +14,10 @@
     color: #f0bb29;
 }
 
+.strike-through {
+    text-decoration: line-through;
+}
+
 #timer {
     margin-top: 0;
 }
