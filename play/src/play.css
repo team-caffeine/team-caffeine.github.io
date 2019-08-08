@@ -1,0 +1,33 @@
+#user-avatar {
+    transition: all .1s; 
+}
+
+#user-avatar:hover {
+    transform: scale(1.1);
+}
+
+.profile-name-link {
+    text-decoration: none;
+}
+
+#profile:hover {
+    color: #f0bb29;
+}
+
+#timer {
+    margin-top: 0;
+}
+
+#order-display {
+    margin-top: 0;
+}
+
+#results-button, #try-again, #start-play {
+    width: 200px
+}
+
+#overlay {
+    position: fixed;
+    z-index: 2;
+    background-color: 
+}
