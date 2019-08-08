@@ -129,12 +129,18 @@ label {
 
 #ingredient-2-div {
     position: absolute;
-    top: 78%;
-    left: 35px;
+    top: 79%;
+    left: 37px;
+}
+
+#whipped-cream-img {
+    position: absolute;
+    left: 37px;
+    top: 50%;
 }
 
 #ingredient-2 {
-    width: 310px;
+    width: 305px;
     animation-name: ingredient-2;
     animation-duration: 0.3s;
 }
