@@ -11,9 +11,9 @@ function getRandomDrink() {
     return randomDrink;
 }
 
-export default generateRandomOrder();
+// generateRandomOrder();
 
-function generateRandomOrder() {
+export function generateRandomOrder() {
     const randomDrinkOrder = [];
     const randomDrinkOne = getRandomDrink();
     randomDrinkOrder.push(randomDrinkOne);
@@ -27,7 +27,7 @@ function generateRandomOrder() {
     randomDrinkOrder.push(randomDrinkFive);
     return randomDrinkOrder;
 }
-
-console.log(generateRandomOrder());
+// export default generateRandomOrder();
+// console.log(generateRandomOrder());
 
 

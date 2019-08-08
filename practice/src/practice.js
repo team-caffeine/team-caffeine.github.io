@@ -9,7 +9,6 @@ const emptyCup = document.getElementById('empty-cup');
 let selectedDrink;
 let drinkId;
 
-
 makeDrinkButton.addEventListener('click', (event) => {
     event.preventDefault();
     makeDrinkButton.classList.remove('on-select-drink');
@@ -21,7 +20,6 @@ makeDrinkButton.addEventListener('click', (event) => {
         ingredients[i].classList.add('hidden');
         index = 0; 
     }
-    
 });
 
 let index = 0;
