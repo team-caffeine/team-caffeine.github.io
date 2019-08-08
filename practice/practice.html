@@ -40,23 +40,23 @@
 
     <main>
         <section id="order-display">
-            <h2>Your Drink Orders:</h2>
+            <h2>Pick Your Drink:</h2>
             <form>
-                <input type="radio" name="coffee" value="americano"> Americano<br>
-                <input type="radio" name="coffee" value="breve"> Breve<br>
-                <input type="radio" name="coffee" value="cafe-latte"> Cafe Latte<br>
-                <input type="radio" name="coffee" value="flat-white"> Flat White<br>
-                <input type="radio" name="coffee" value="macchiato"> Macchiato<br>
-                <input type="radio" name="coffee" value="mocha"> Mocha<br>
-                <input type="radio" name="coffee" value="raf-coffee"> Raf Coffee<br>
-                <input type="radio" name="coffee" value="red-eye"> Red Eye<br>
-                <input type="radio" name="coffee" value="vienna-coffee"> Vienna Coffee<br><br>
-                <button id="make-drink">Make It</button>
+                <label><input type="radio" name="coffee" value="americano"> Americano<br></label>
+                <label><input type="radio" name="coffee" value="breve"> Breve<br></label>
+                <label><input type="radio" name="coffee" value="cafe-latte"> Cafe Latte<br></label>
+                <label><input type="radio" name="coffee" value="flat-white"> Flat White<br></label>
+                <label><input type="radio" name="coffee" value="macchiato"> Macchiato<br></label>
+                <label><input type="radio" name="coffee" value="mocha"> Mocha<br></label>
+                <label><input type="radio" name="coffee" value="raf-coffee"> Raf Coffee<br></label>
+                <label><input type="radio" name="coffee" value="red-eye"> Red Eye<br></label>
+                <label><input type="radio" name="coffee" value="vienna-coffee"> Vienna Coffee<br><br></label>
             </form>
+            <button id="make-drink" class="">Make It</button>
         </section>
         
         <section id="cup-display">
-            <img id="empty-cup" src="/assets/emptycup.png">
+            <img id="empty-cup" class="hidden" src="/assets/emptycup.png">
             <div id="ingredients-in-cup">
                 <div id="ingredient-4-div"><img class="ingredients hidden" id="ingredient-4" src=""></div>
                 <div id="ingredient-3-div"><img class="ingredients hidden" id="ingredient-3" src=""></div>
@@ -64,8 +64,9 @@
                 <div id="ingredient-0-div"><img class="ingredients hidden" id="ingredient-0" src=""></div>
             </div>
         </section>
-
+        
         <section id="ingredient-container">
+            <a href="../profile/profile.html"><button id="results-button">Get Your Results</button></a>
             <h2>Choose Your Ingredients:</h2>
             <button class="ingredient-buttons" id="drip-coffee">Drip Coffee</button>
             <button class="ingredient-buttons" id="chocolate">Chocolate</button>
@@ -79,6 +80,7 @@
             <button class="ingredient-buttons" id="whipped-cream">Whipped Cream</button>
         </section>
     </main>
+    
 
     <div id="results-section">
         <h2 id="results-message"></h2>

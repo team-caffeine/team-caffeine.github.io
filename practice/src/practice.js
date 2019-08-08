@@ -4,18 +4,22 @@ const ingredients = document.getElementsByClassName('ingredients');
 const makeDrinkButton = document.getElementById('make-drink');
 const resultsMessage = document.getElementById('results-message');
 const cupDisplay = document.getElementById('cup-display');
+const emptyCup = document.getElementById('empty-cup');
 
 let selectedDrink;
 let drinkId;
 
 makeDrinkButton.addEventListener('click', (event) => {
     event.preventDefault();
+    makeDrinkButton.classList.remove('on-select-drink');
+    emptyCup.classList.remove('hidden');
     selectedDrink = store.getSelectedDrink();
     drinkId = store.getDrinkId();
     for(let i = 0; i < ingredients.length; i++) {
         ingredients[i].classList.add('hidden');
         index = 0; 
     }
+    
 });
 
 let index = 0;

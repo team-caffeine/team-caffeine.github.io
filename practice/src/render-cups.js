@@ -2,10 +2,7 @@ import drinks from '../../data/drinks.js';
 import { findDrink } from '../../src/util.js';
 import store from '../../data/store.js';
 
-// const ingredientOne = document.getElementById('ingredient-1');
-// const ingredientTwo = document.getElementById('ingredient-2');
-// const ingredientThree = document.getElementById('ingredient-3');
-// const ingredientFour = document.getElementById('ingredient-4');
+const makeItButton = document.getElementById('make-drink');
 
 userSelectedDrink();
 
@@ -17,7 +14,11 @@ export function userSelectedDrink() {
             const drinkToMake = findDrink(drinks, coffeeInputs[i].value);
             const ingredients = drinkToMake.ingredients;
             const drinkId = drinkToMake.id;
+            makeItButton.classList.add('on-select-drink');
             store.saveSelectedDrink(ingredients, drinkId);
+            setTimeout(function() { 
+                makeItButton.classList.remove('on-select-drink');  
+            }, 200);
         });
     }
 }

@@ -7,6 +7,10 @@ main {
     margin-top: 2%;
 }
 
+label {
+    line-height: 1.6em;
+}
+
 #title {
     text-align: center;
     margin-top: 50px;
@@ -39,6 +43,7 @@ main {
     transform: scale(1.3);
 }
 
+/* found on W3schools https://www.w3schools.com/howto/howto_css_shake_image.asp */
 @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
     10% { transform: translate(-1px, -2px) rotate(-1deg); }
@@ -51,9 +56,20 @@ main {
     80% { transform: translate(-1px, -1px) rotate(1deg); }
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
-  }
+}
 .on-wrong {
-    animation: shake 0.5s;
+    animation: shake 0.1s;
+}
+
+.on-select-drink {
+    transform: scale(1.2);
+    background-color: #f0bb29;
+}
+
+#make-drink {
+    margin-top: 30px;
+    width: 200px;
+    transition: all 0.1s ease-in-out;
 }
 
 #empty-cup {
@@ -116,6 +132,10 @@ main {
     width: 250px;
     margin-bottom: 3px;
     font-weight: 700;
+}
+
+h2 {
+    margin-bottom: 7px;
 }
 
 .ingredient-buttons:hover {
