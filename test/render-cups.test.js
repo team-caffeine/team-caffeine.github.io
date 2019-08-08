@@ -1,14 +1,14 @@
-import renderMocha from '../practice/src/render-cups.js';
+// import renderMocha from '../practice/src/render-cups.js';
 
-const test = QUnit.test;
+// const test = QUnit.test;
 
-QUnit.module('Module Name');
+// QUnit.module('Module Name');
 
-test('test name', assert => {
-    // arrange
+// test('test name', assert => {
+//     // arrange
     
-    // act
+//     // act
     
-    // assert
-    assert.equal(true, true);
-});
+//     // assert
+//     assert.equal(true, true);
+// });

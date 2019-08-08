@@ -1,5 +1,6 @@
 import store from '../src/data/store.js';
-import products from '../src/data/f&s-data.js';
+import products from '../src/data/f&s-data.js'; 
+
 const test = QUnit.test;
 QUnit.module('Store Object');
 store.storage = window.sessionStorage;
@@ -64,25 +65,25 @@ test('get product from inventory', assert => {
    //assert
     assert.deepEqual(product, expected);
 });
-test('add new product to inventory', assert => {
-   //arrange
-    const product = {
-        code: 'gardening-shears',
-        name: 'Gardening Shears',
-        image: './assets/gardening-shears.png',
-        description: 'Shears meant for gardening',
-        category: 'stuff',
-        price: 13.00,
-        cost: 6.00,
-    };
+// test('add new product to inventory', assert => {
+//    //arrange
+//     const product = {
+//         code: 'gardening-shears',
+//         name: 'Gardening Shears',
+//         image: './assets/gardening-shears.png',
+//         description: 'Shears meant for gardening',
+//         category: 'stuff',
+//         price: 13.00,
+//         cost: 6.00,
+//     };
 
-    //act
-    store.saveUser(user);
-    const result = store.getUser();
+//     //act
+//     store.saveUser(user);
+//     const result = store.getUser();
 
-    //assert
-    assert.deepEqual(result, user);
-});
+//     //assert
+//     assert.deepEqual(result, user);
+// });
 test('saves an drink and pulls it from memory', (assert) => {
     const drink = {
         id: 'americano',

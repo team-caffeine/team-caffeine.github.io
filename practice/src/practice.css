@@ -11,6 +11,12 @@ label {
     line-height: 1.6em;
 }
 
+#results-message {
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-top: 0px;
+}
+
 #title {
     text-align: center;
     margin-top: 50px;
@@ -78,18 +84,13 @@ label {
     top: 45%;
     right: 0%;
     z-index: 1;
+    animation-name: empty-cup;
+    animation-duration: 0.5s;
 }
 
-#ingredient-2 {
-    width: 310px;
-}
-
-#ingredient-3 {
-    width: 325px;
-}
-
-#ingredient-4 {
-    width: 320px;
+@keyframes empty-cup {
+    0%      {transform: translateY(500%);}
+    100%    {transform: translateY(0);}
 }
 
 #ingredient-4-div {
@@ -98,16 +99,49 @@ label {
     left: 35px;
 }
 
+#ingredient-4 {
+    width: 320px;
+    animation-name: ingredient-4;
+    animation-duration: 0.3s;
+}
+
+@keyframes ingredient-4 {
+    0%      {transform: translateY(-500%);}
+    100%    {transform: translateY(0);}
+}
+
 #ingredient-3-div {
     position: absolute;
     top: 61%;
     left: 30px;
 }
 
+#ingredient-3 {
+    width: 325px;
+    animation-name: ingredient-3;
+    animation-duration: 0.3s;
+}
+
+@keyframes ingredient-3 {
+    0%      {transform: translateY(-500%);}
+    100%    {transform: translateY(0);}
+}
+
 #ingredient-2-div {
     position: absolute;
     top: 78%;
     left: 35px;
+}
+
+#ingredient-2 {
+    width: 310px;
+    animation-name: ingredient-2;
+    animation-duration: 0.3s;
+}
+
+@keyframes ingredient-2 {
+    0%      {transform: translateY(-500%);}
+    100%    {transform: translateY(0);}
 }
 
 #ingredient-0-div {
@@ -118,6 +152,13 @@ label {
 
 #ingredient-0 {
     width: 272px;
+    animation-name: ingredient-0;
+    animation-duration: 0.3s;
+}
+
+@keyframes ingredient-0 {
+    0%      {transform: translateY(-500%);}
+    100%    {transform: translateY(0);}
 }
 
 /* buttons CSS */
