@@ -48,7 +48,6 @@ for(let j = 0; j < ingredientButton.length; j++) {
                 resultsMessage.textContent = '';
                 cupDisplay.classList.remove('on-wrong');
             }, 1000);
-        
         }
         if(index === selectedDrink.length) {
             resultsMessage.textContent = 'Nice, you made it!';
@@ -62,9 +61,6 @@ for(let j = 0; j < ingredientButton.length; j++) {
             }, 1200);
             store.countDrink(store.getDrinkId());
             sessionStore.countDrink(store.getDrinkId());
-
         } 
-
     });
-
 }

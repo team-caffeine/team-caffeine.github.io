@@ -4,7 +4,6 @@ import { store } from '../../data/store.js';
 getRandomDrink();
 
 function getRandomDrink() {
-    
     const drinks = store.getDrinks();
     const index = getRandomInt(drinks.length);
     const randomDrink = drinks[index];
@@ -15,7 +14,6 @@ randomOrderNoDuplicates();
 
 export function randomOrderNoDuplicates() {
     const randomDrinkOrder = [];
-
     while(randomDrinkOrder.length < 5) {
         let duplicate = false;
         const randomDrink = getRandomDrink();

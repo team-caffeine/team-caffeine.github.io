@@ -1,6 +1,5 @@
 const eachDrink = document.getElementsByClassName('each-drink');
 
-
 for(let i = 0; i < eachDrink.length; i++) {
     const drink = eachDrink[i];
     const drinkDescription = drink.childNodes[5];
@@ -11,19 +10,5 @@ for(let i = 0; i < eachDrink.length; i++) {
             drinkDescription.classList.add('hidden');
             drink.classList.remove('featured-drink');
         });
-
     });
 }
-
-// function expandDrink() {
-//     console.log(eachDrink.childNodes[2]);
-// }
-
-// eachDrink.addEventListener('click', () => {
-//     console.log('help');
-//     
-// });
-
-// eachDrink.addEventListener('click', () => {
-//     console.log('test');
-// })

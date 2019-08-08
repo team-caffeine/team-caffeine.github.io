@@ -16,6 +16,7 @@ tryAgain.addEventListener('click', () => {
 
 let interval;
 
+// From JSFiddle.net https://jsfiddle.net/wr1ua0db/17/
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
     interval = setInterval(function() {
@@ -135,7 +136,5 @@ for(let j = 0; j < ingredientButton.length; j++) {
             resultsButton.classList.remove('hidden');
             tryAgain.classList.remove('hidden');
         }
-
     });
-
 }
