@@ -14,6 +14,7 @@ makeDrinkButton.addEventListener('click', (event) => {
     event.preventDefault();
     makeDrinkButton.classList.remove('on-select-drink');
     emptyCup.classList.remove('hidden');
+    ingredients[2].parentElement.setAttribute('id', 'ingredient-2-div');
     selectedDrink = store.getSelectedDrink();
     drinkId = store.getDrinkId();
     for(let i = 0; i < ingredients.length; i++) {
@@ -32,6 +33,9 @@ for(let j = 0; j < ingredientButton.length; j++) {
         let ingredient = event.currentTarget;
         const currentIngredient = ingredient.id;
         if(currentIngredient === selectedDrink[index]) {
+            if(currentIngredient === 'whipped-cream' && currentIngredient === selectedDrink[1]) {
+                ingredients[2].parentElement.setAttribute('id', 'whipped-cream-img');
+            }
             ingredients[ingredients.length - 1 - index].classList.remove('hidden');
             ingredients[ingredients.length - 1 - index].src = '../assets/ingredients/' + drinkId + '/' + selectedDrink[index] + '.png';
             index++;
