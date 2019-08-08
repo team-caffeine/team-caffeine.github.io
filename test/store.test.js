@@ -1,5 +1,6 @@
 import store from '../src/data/store.js';
-import products from '../src/data/f&s-data.js';
+import products from '../src/data/f&s-data.js'; 
+
 const test = QUnit.test;
 QUnit.module('Store Object');
 store.storage = window.sessionStorage;
