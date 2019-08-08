@@ -84,6 +84,13 @@ label {
     top: 45%;
     right: 0%;
     z-index: 1;
+    animation-name: empty-cup;
+    animation-duration: 0.5s;
+}
+
+@keyframes empty-cup {
+    0%      {transform: translateY(500%);}
+    100%    {transform: translateY(0);}
 }
 
 #ingredient-4-div {
