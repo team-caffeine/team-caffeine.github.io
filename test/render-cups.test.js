@@ -1,4 +1,4 @@
-import renderMocha from '../practice/src/render-cups.js';
+// import renderMocha from '../practice/src/render-cups.js';
 
 const test = QUnit.test;
 

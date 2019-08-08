@@ -1,7 +1,7 @@
 import renderAllTimeProfile from '../all-time-user-render.js';
 import renderSessionProfileLine from '../session-user-render.js';
-import finishedDrinks from '../../data/all-time-finished-drinks.js';
-import store  from '../../data/store.js';
+// import finishedDrinks from '../../data/all-time-finished-drinks.js';
+import store from '../../data/store.js';
 import drinks from '../../data/drinks.js';
 import { findDrink } from '../../src/util.js';
 import sessionFinishedDrinks from '../../data/session-finished-drinks.js';

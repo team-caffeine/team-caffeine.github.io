@@ -15,9 +15,9 @@ for(let i = 0; i < eachDrink.length; i++) {
     });
 }
 
-function expandDrink() {
-    console.log(eachDrink.childNodes[2]);
-}
+// function expandDrink() {
+//     console.log(eachDrink.childNodes[2]);
+// }
 
 // eachDrink.addEventListener('click', () => {
 //     console.log('help');
