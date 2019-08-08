@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Deja Brew</title>
     <link rel="stylesheet" href="../src/main.css">
-    <link rel="stylesheet" href="/play/play.css">
+    <link rel="stylesheet" href="../practice/src/practice.css">
+    <link rel="stylesheet" href="src/play.css">
     <link href="https://fonts.googleapis.com/css?family=Yellowtail&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
@@ -15,32 +16,95 @@
     <header>
         <div id="header-box">
             <div id="logo">
-                <img src="/assets/croppedlogo.png" class="logo" alt="logo">
-                <h1>deja<span class="h1-brew">BREW</span></h1>
+            <img src="../assets/croppedlogo.png" class="logo" alt="logo">
+            <h1>deja<span class="h1-brew">BREW</span></h1>
             </div>
             <div>
-                <nav>
-                    <li><a href="../index.html">Home</a></li> | 
-                    <li><a href="../study/study.html">Study</a></li> | 
-                    <li><a href="../practice/practice.html">Practice</a></li> | 
-                    <li><a href="../play/play.html">Play</a></li>
-                </nav>
-            </div>
-            <div id="profile-section">
-                <a class="profile-image-link" href= "../profile/profile.html"><img id="user-avatar" class="user-name-icon" src=""></a>  
-                <a class="profile-name-link" href= "../profile/profile.html"><h3 id="profile"></h3></a>
-            </div>
+                    <nav>
+                        <li><a href="../index.html">Home</a></li> | 
+                        <li><a href="../study/study.html">Study</a></li> | 
+                        <li><a href="../practice/practice.html">Practice</a></li> | 
+                        <li><a href="../play/play.html">Play</a></li>
+                    </nav>
+                </div>
+                <div id="profile-section">
+                    <a class="profile-image-link" href= "../profile/profile.html"><img id="user-avatar" class="user-name-icon" src=""></a>  
+                    <a class="profile-name-link" href= "../profile/profile.html"><h3 id="profile"></h3></a>
+                </div>
+        </div>
+    </header>
+
+    <div id="title">
+        <h1>You're On The Clock!</h1>
+        <p>Choose the ingredients from the list on the right to create the drinks that are on your order sheet.</p>
+
+    </div>
+    
+    <main>
+        <div>
+            <h1 id="timer">01:00</h1>
+        <section id="order-display">
+            <h2>Pick Your Drink:</h2>
+            <form>
+                <label><input type="radio" name="coffee" value="americano"> Americano<br></label>
+                <label><input type="radio" name="coffee" value="breve"> Breve<br></label>
+                <label><input type="radio" name="coffee" value="cafe-latte"> Cafe Latte<br></label>
+                <label><input type="radio" name="coffee" value="flat-white"> Flat White<br></label>
+                <label><input type="radio" name="coffee" value="macchiato"> Macchiato<br></label>
+                <label><input type="radio" name="coffee" value="mocha"> Mocha<br></label>
+                <label><input type="radio" name="coffee" value="raf-coffee"> Raf Coffee<br></label>
+                <label><input type="radio" name="coffee" value="red-eye"> Red Eye<br></label>
+                <label><input type="radio" name="coffee" value="vienna-coffee"> Vienna Coffee<br><br></label>
+            </form>
+            <button id="make-drink" class="">Make It</button>
+        </section>
         </div>
         
-    </header>
-    <main>
+        <section id="cup-display">
+            <div id="overlay">
+                    <button id="start-play">Show me the orders</button>
+                    <h1 id="you-lose-message"></h1>
+                    <button id="try-again" class="hidden">Try Again</button>
+                    <a href="../profile/profile.html"><button id="results-button" class="hidden">Get Your Results</button></a>            
+            </div>
+            <img id="empty-cup" class="hidden" src="/assets/emptycup.png">
+            <div id="ingredients-in-cup">
+                <div id="ingredient-4-div"><img class="ingredients hidden" id="ingredient-4" src=""></div>
+                <div id="ingredient-3-div"><img class="ingredients hidden" id="ingredient-3" src=""></div>
+                <div id="ingredient-2-div"><img class="ingredients hidden" id="ingredient-2" src=""></div>
+                <div id="ingredient-0-div"><img class="ingredients hidden" id="ingredient-0" src=""></div>
+            </div>
+            <h2 id="results-message"></h2>
+            
+        </section>
         
+        <section id="ingredient-container">
+            <h2>Choose Your Ingredients:</h2>
+            <button class="ingredient-buttons" id="drip-coffee">Drip Coffee</button>
+            <button class="ingredient-buttons" id="chocolate">Chocolate</button>
+            <button class="ingredient-buttons" id="espresso">Espresso</button>
+            <button class="ingredient-buttons" id="water">Water</button>
+            <button class="ingredient-buttons" id="vanilla-sugar">Vanilla Sugar</button>
+            <button class="ingredient-buttons" id="steamed-milk">Steamed Milk</button>
+            <button class="ingredient-buttons" id="half-and-half-milk">Half and Half</button>
+            <button class="ingredient-buttons" id="milk-foam">Milk Foam</button>
+            <button class="ingredient-buttons" id="cream">Cream</button>
+            <button class="ingredient-buttons" id="whipped-cream">Whipped Cream</button>
+        </section>
     </main>
+    
 
+    <div id="results-section">
+        
+    </div>
+    
     <footer>
         <p>Made by <a class="about-me-link" href="../about-us/about-us.html">Team Caffeine</a></p>
     </footer>
-    <script type="module" src="../src/user-profile-status.js"></script>
-    <script type="module" src="./src/random-order-generator.js"></script>
+   <script src="../practice/src/practice.js" type="module"></script> 
+   <script type="module" src="../src/user-profile-status.js"></script>
+   <script type="module" src="../practice/src/render-cups.js"></script>
+   <script type="module" src="src/play.js"></script>
+   <script type="module" src="./src/random-order-generator.js"></script>
 </body>
 </html>
