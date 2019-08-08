@@ -1,4 +1,5 @@
 import drinks from './drinks.js';
+import { findDrink } from '../src/util.js';
 
 const SAVED_INGREDIENTS = 'ingredient-list';
 const SELECTED_DRINK = 'selected-drink';
@@ -57,7 +58,56 @@ const store = {
         if(!json) return null;
         let ingredient = JSON.parse(json);
         return ingredient;
+    },
+    getFinishedDrinks() {
+        let finishedDrinks = store.get('finished-drinks');
+        if(!finishedDrinks) {
+            finishedDrinks = [];           
+        }
+        return finishedDrinks;
+    },
+    countDrink(id) {
+        const finishedDrinks = store.getFinishedDrinks();
+        const madeDrink = findDrink(finishedDrinks, id);
+        if(madeDrink) {
+            madeDrink.quantity++;
+        }
+        else {
+            const madeDrink = {
+                id: id,
+                quantity: 1,
+            };
+            finishedDrinks.push(madeDrink);
+        }
+        store.save('finished-drinks', finishedDrinks);
     }
 };
+
+// export const sessionStore = {
+//     storage: window.sessionStorage,
+ 
+//     getFinishedDrinks() {
+//         let finishedDrinks = sessionStore.get('finished-drinks');
+//         if(!finishedDrinks) {
+//             finishedDrinks = [];           
+//         }
+//         return finishedDrinks;
+//     },
+//     countDrink(id) {
+//         const finishedDrinks = sessionStore.getFinishedDrinks();
+//         const madeDrink = findDrink(finishedDrinks, id);
+//         if(madeDrink) {
+//             madeDrink.quantity++;
+//         }
+//         else {
+//             const madeDrink = {
+//                 id: id,
+//                 quantity: 1,
+//             };
+//             finishedDrinks.push(madeDrink);
+//         }
+//         sessionStore.save('finished-drinks', finishedDrinks);
+//     }
+// };
 
 export default store;
