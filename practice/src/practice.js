@@ -9,6 +9,7 @@ const emptyCup = document.getElementById('empty-cup');
 let selectedDrink;
 let drinkId;
 
+
 makeDrinkButton.addEventListener('click', (event) => {
     event.preventDefault();
     makeDrinkButton.classList.remove('on-select-drink');
@@ -57,6 +58,9 @@ for(let j = 0; j < ingredientButton.length; j++) {
                     cupDisplay.classList.remove('on-win');
                 }
             }, 1200);
+            store.countDrink(store.getDrinkId());
+            // sessionStore.countDrink(store.getDrinkId());
+
         } 
 
     });
