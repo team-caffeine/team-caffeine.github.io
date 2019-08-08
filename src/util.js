@@ -7,3 +7,7 @@ export function findDrink(drinks, id) {
     }
     return null;
 }
+
+export function getRandomInt(length) {
+    return Math.floor(Math.random() * length);
+}
