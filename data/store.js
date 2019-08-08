@@ -83,31 +83,39 @@ const store = {
     }
 };
 
-// export const sessionStore = {
-//     storage: window.sessionStorage,
- 
-//     getFinishedDrinks() {
-//         let finishedDrinks = sessionStore.get('finished-drinks');
-//         if(!finishedDrinks) {
-//             finishedDrinks = [];           
-//         }
-//         return finishedDrinks;
-//     },
-//     countDrink(id) {
-//         const finishedDrinks = sessionStore.getFinishedDrinks();
-//         const madeDrink = findDrink(finishedDrinks, id);
-//         if(madeDrink) {
-//             madeDrink.quantity++;
-//         }
-//         else {
-//             const madeDrink = {
-//                 id: id,
-//                 quantity: 1,
-//             };
-//             finishedDrinks.push(madeDrink);
-//         }
-//         sessionStore.save('finished-drinks', finishedDrinks);
-//     }
-// };
+const sessionStore = {
+    storage: window.sessionStorage,
+    save(key, item) {
+        const json = JSON.stringify(item);
+        sessionStore.storage.setItem(key, json);
+    },
+    get(key) {
+        const json = sessionStore.storage.getItem(key);
+        const item = JSON.parse(json);
+        return item;
+    },
+    getFinishedDrinks() {
+        let finishedDrinks = sessionStore.get('finished-drinks');
+        if(!finishedDrinks) {
+            finishedDrinks = [];           
+        }
+        return finishedDrinks;
+    },
+    countDrink(id) {
+        const finishedDrinks = sessionStore.getFinishedDrinks();
+        const madeDrink = findDrink(finishedDrinks, id);
+        if(madeDrink) {
+            madeDrink.quantity++;
+        }
+        else {
+            const madeDrink = {
+                id: id,
+                quantity: 1,
+            };
+            finishedDrinks.push(madeDrink);
+        }
+        sessionStore.save('finished-drinks', finishedDrinks);
+    }
+};
 
-export default store;
+export { store, sessionStore };
