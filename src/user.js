@@ -1,4 +1,4 @@
-import store from '../data/store.js';
+import { store } from '../data/store.js';
 import makeUser from './make-user.js';
 
 const userSignUp = document.getElementById('user-form');

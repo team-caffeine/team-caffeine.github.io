@@ -1,6 +1,6 @@
 import drinks from '../../data/drinks.js';
 import { findDrink } from '../../src/util.js';
-import store from '../../data/store.js';
+import { store } from '../../data/store.js';
 
 const makeItButton = document.getElementById('make-drink');
 
