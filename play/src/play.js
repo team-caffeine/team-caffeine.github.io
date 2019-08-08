@@ -10,6 +10,10 @@ const overlay = document.getElementById('overlay');
 const emptyCup = document.getElementById('empty-cup');
 const orderForm = document.getElementById('order-form');
 
+tryAgain.addEventListener('click', () => {
+    location.reload();
+});
+
 let interval;
 
 function startTimer(duration, display) {
@@ -123,7 +127,6 @@ for(let j = 0; j < ingredientButton.length; j++) {
             store.countDrink(store.getDrinkId());
             sessionStore.countDrink(store.getDrinkId());
         } 
-        // console.log(winCount);
         if(winCount === 5) {
             resultMessage.textContent = 'You win!';
             clearInterval(interval);
