@@ -23,6 +23,14 @@
     margin-top: 20px;
 }
 
+.about-me-link {
+    text-decoration: none;
+}
+
+.about-me-header:hover {
+    color: #f0bb29;
+}
+
 .about-me-paragraph {
     max-width: 350px;
 }
