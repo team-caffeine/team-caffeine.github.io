@@ -15,7 +15,5 @@ function renderAllTimeProfile(lineItem, drink) {
     p.textContent = quantityCell + ' ' + drinkName;
     div.appendChild(p);
     return div;
-
 }
-
 export default renderAllTimeProfile;
