@@ -12,7 +12,8 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 </head>
-<body>
+<body>    
+
     <header>
         <div id="header-box">
             <div id="logo">
@@ -36,26 +37,31 @@
 
     <div id="title">
         <h1>You're On The Clock!</h1>
-        <p>Choose the ingredients from the list on the right to create the drinks that are on your order sheet.</p>
     </div>
-    
+
     <main>
         <div>
             <h1 id="timer">01:00</h1>
             <section id="order-display">
-                <h2>Pick Your Drink:</h2>
+                <h2 id="pick-drink-text" class="hidden">Pick Your Drink:</h2>
                 <form id="order-form">
                 </form>
-                <button id="make-drink" class="">Make It</button>
+                <button id="make-drink" class="hidden">Make It</button>
             </section>
         </div>
         
         <section id="cup-display">
             <div id="overlay" class="overlay-background">
-                    <button id="start-play">Show me the orders</button>
-                    <h1 id="you-lose-message"></h1>
-                    <button id="try-again" class="hidden">Try Again</button>
-                    <a href="../profile/profile.html"><button id="results-button" class="hidden">Get Your Results</button></a>            
+                <ol id="instructions-container">
+                    <li class="instructions">Click the button below to get your customers' order and start the timer!</li>
+                    <li class="instructions">Select the drink you want to make and click MAKE IT!</li>
+                    <li class="instructions">Choose from the ingredient list on the right. Make sure to build your drink from bottom to top!</li>
+                    <li class="instructions">Finish the order before the timer runs out and you WIN!</li>
+                </ol>
+                <button id="start-play">Let's Get Started</button>
+                <h1 id="you-lose-message"></h1>
+                <button id="try-again" class="hidden">Try Again</button>
+                <a href="../profile/profile.html"><button id="results-button" class="hidden">Get Your Results</button></a>            
             </div>
             <img id="empty-cup" class="hidden" src="/assets/emptycup.png">
             <div id="ingredients-in-cup">

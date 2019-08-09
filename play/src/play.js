@@ -9,6 +9,9 @@ const resultMessage = document.getElementById('you-lose-message');
 const overlay = document.getElementById('overlay');
 const emptyCup = document.getElementById('empty-cup');
 const orderForm = document.getElementById('order-form');
+const instructionsContainer = document.getElementById('instructions-container');
+const makeDrinkButton = document.getElementById('make-drink');
+const orderHeader = document.getElementById('pick-drink-text');
 
 tryAgain.addEventListener('click', () => {
     location.reload();
@@ -49,6 +52,9 @@ startPlay.addEventListener('click', () => {
     }
     userSelectedDrink();
     overlay.classList.remove('overlay-background');
+    instructionsContainer.classList.add('hidden');
+    makeDrinkButton.classList.remove('hidden');
+    orderHeader.classList.remove('hidden');
     var oneMinute = 60,
         display = document.querySelector('#timer');
     startTimer(oneMinute, display);
@@ -58,7 +64,6 @@ startPlay.addEventListener('click', () => {
 import { store, sessionStore } from '../../data/store.js';
 
 const ingredients = document.getElementsByClassName('ingredients');
-const makeDrinkButton = document.getElementById('make-drink');
 const resultsMessage = document.getElementById('results-message');
 const cupDisplay = document.getElementById('cup-display');
 const coffeeInputs = document.getElementsByName('coffee');
@@ -129,12 +134,14 @@ for(let j = 0; j < ingredientButton.length; j++) {
             sessionStore.countDrink(store.getDrinkId());
         } 
         if(winCount === 5) {
-            resultMessage.textContent = 'You win!';
-            clearInterval(interval);
-            overlay.classList.add('overlay-background');
-            emptyCup.classList.add('hidden');
-            resultsButton.classList.remove('hidden');
-            tryAgain.classList.remove('hidden');
+            setTimeout(function() { 
+                resultMessage.textContent = 'You win!';
+                clearInterval(interval);
+                overlay.classList.add('overlay-background');
+                emptyCup.classList.add('hidden');
+                resultsButton.classList.remove('hidden');
+                tryAgain.classList.remove('hidden');
+            }, 1700);
         }
     });
 }

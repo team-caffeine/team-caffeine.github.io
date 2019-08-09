@@ -275,3 +275,30 @@ h2 {
 #profile:hover {
     color: #f0bb29;
 }
+
+#results-button, #try-again, #start-play {
+    width: 200px
+}
+
+#overlay {
+    position: fixed;
+    z-index: 2;
+    padding: 20px;
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.overlay-background {
+    background-color: rgba(255, 255, 255, 0.584);
+}
+
+.instructions {
+    text-align: left;
+    margin-bottom: 12px; 
+}
+
+ol {
+    width: 95%;
+    margin-top: 0;
+}
