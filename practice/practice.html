@@ -35,13 +35,12 @@
 
     <div id="title">
         <h1>Let's Brew It!</h1>
-        <p>Choose the ingredients from the list on the right to create the drinks that are on your order sheet.</p>
     </div>
 
     <main>
         <section id="order-display">
-            <h2>Pick Your Drink:</h2>
-            <form id="order-form">
+            <h2 id="pick-drink-text" class="hidden">Pick Your Drink:</h2>
+            <form id="order-form" class="hidden">
                 <label><input type="radio" name="coffee" value="americano"> Americano<br></label>
                 <label><input type="radio" name="coffee" value="breve"> Breve<br></label>
                 <label><input type="radio" name="coffee" value="cafe-latte"> Cafe Latte<br></label>
@@ -52,10 +51,22 @@
                 <label><input type="radio" name="coffee" value="red-eye"> Red Eye<br></label>
                 <label><input type="radio" name="coffee" value="vienna-coffee"> Vienna Coffee<br><br></label>
             </form>
-            <button id="make-drink" class="">Make It</button>
+            <button id="make-drink" class="hidden">Make It</button>
         </section>
         
         <section id="cup-display">
+            <div id="overlay" class="overlay-background">
+                    <ol id="instructions-container">
+                        <li class="instructions">Click the button below to show your list of drinks!</li>
+                        <li class="instructions">Select the drink you want to make and click MAKE IT!</li>
+                        <li class="instructions">Choose from the ingredient list on the right. Make sure to build your drink from bottom to top!</li>
+                        <li class="instructions">When you're ready head to our Play page for a real challenge!</li>
+                    </ol>
+                    <button id="start-play">Let's Get Started</button>
+                    <h1 id="you-lose-message"></h1>
+                    <button id="try-again" class="hidden">Try Again</button>
+                    <a href="../profile/profile.html"><button id="results-button" class="hidden">Get Your Results</button></a>            
+            </div>
             <img id="empty-cup" class="hidden" src="/assets/emptycup.png">
             <div id="ingredients-in-cup">
                 <div id="ingredient-4-div"><img class="ingredients hidden" id="ingredient-4" src=""></div>

@@ -5,9 +5,23 @@ const makeDrinkButton = document.getElementById('make-drink');
 const resultsMessage = document.getElementById('results-message');
 const cupDisplay = document.getElementById('cup-display');
 const emptyCup = document.getElementById('empty-cup');
+const startPlay = document.getElementById('start-play');
+const overlay = document.getElementById('overlay');
+const instructionsContainer = document.getElementById('instructions-container');
+const orderHeader = document.getElementById('pick-drink-text');
+const orderForm = document.getElementById('order-form');
 
 let selectedDrink;
 let drinkId;
+
+startPlay.addEventListener('click', () => {
+    overlay.classList.remove('overlay-background');
+    instructionsContainer.classList.add('hidden');
+    makeDrinkButton.classList.remove('hidden');
+    startPlay.classList.add('hidden');
+    orderHeader.classList.remove('hidden');
+    orderForm.classList.remove('hidden');
+});
 
 makeDrinkButton.addEventListener('click', (event) => {
     event.preventDefault();
