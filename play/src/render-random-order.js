@@ -10,8 +10,8 @@ function renderRandomOrder(drink) {
     label.appendChild(input);
 
     const drinkName = drink.name;
-    const blah = document.createTextNode(' ' + drinkName);
-    label.appendChild(blah);
+    const drinkLabel = document.createTextNode(' ' + drinkName);
+    label.appendChild(drinkLabel);
     
     const breakLine = document.createElement('br');
     label.appendChild(breakLine);

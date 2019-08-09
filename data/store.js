@@ -80,18 +80,7 @@ const store = {
             finishedDrinks.push(madeDrink);
         }
         store.save('finished-drinks', finishedDrinks);
-    },
-    getRandomDrink() {
-        let randomDrinkList = store.get('random-drinks');
-        if(!randomDrinkList) {
-            randomDrinkList = [];
-        }
-        return randomDrinkList;
-    },
-    saveRandomDrinkList(randomDrinks) {
-        const json = JSON.stringify(randomDrinks);
-        store.storage.setItem('random-drinks', json);
-    },
+    }
 };
 
 const sessionStore = {
