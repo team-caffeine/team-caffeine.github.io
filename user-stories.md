@@ -2,6 +2,9 @@
 
 ## User Stories | Deja Brew!
 
+// these are personas, not user stories
+// Good personas, user stories are the things they want to do in the app.
+
 ### Jamie Jameson | Coffee Lover
 Jamie Jameson is a coffee lover who is timid to enter coffee shops as his knowledge of coffee concoctions is supremely limited. From the midwest, Jamie wants to immerse himself in local coffee culture, but simply doesn't know where to start! What does he want? Confidence. How does he get it? With Deja Brew! 
 
