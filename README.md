@@ -1,5 +1,5 @@
 ## The Team
-* Abbey Masters
+* Abbey Masters 
 * Jose Ojeda
 * Alex Spencer
 * Allison Busse
